@@ -1,249 +1,233 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2299">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="UTF-8" />
+  <title>Nehal Sanghai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- 🌊 wave favicon -->
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌊%3C/text%3E%3C/svg%3E"
+  />
+
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fafafa;
+      --text: #111;
+      --muted: #555;
+      --accent: #2563eb;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 2.5rem 1.5rem 3rem;
+      font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      cursor: none;
+    }
+    .page {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ---- Links + subtle hover animation ---- */
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      position: relative;
+      transition:
+        color 0.15s ease-out,
+        transform 0.15s ease-out;
+    }
+
+    /* animated underline */
+    a::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 1px;
+      background-color: var(--accent);
+      opacity: 0.85;
+      transition: width 0.18s ease-out;
+    }
+
+    a:hover {
+      transform: translateY(-1px);
+    }
+
+    a:hover::before {
+      width: 100%;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      margin: 2rem 0 1.5rem;
+    }
+    .section-title {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 1rem;
+    }
+    .socials a {
+      border: none;
+      position: relative;
+    }
+    /* keep the little ↗ arrow on social links */
+    .socials a::after {
+      content: "↗";
+      font-size: 0.75em;
+      margin-left: 0.2rem;
+      opacity: 0.5;
+    }
+
+    /* ---- Custom cursor ---- */
+    .cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 2px solid rgba(0, 0, 0, 0.6);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition:
+        transform .15s ease-out,
+        width .15s ease-out,
+        height .15s ease-out,
+        background-color .15s ease-out,
+        border-color .15s ease-out;
+      z-index: 9999;
+      mix-blend-mode: difference;
+    }
+    .cursor--link {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.12);
+      border-color: rgba(0, 0, 0, 0.8);
+    }
   </style>
 </head>
+
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Nehal Sanghai&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- 🌊 wave favicon --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link</p>
-<p class="p1"><span class="Apple-converted-space">    </span>rel="icon"</p>
-<p class="p1"><span class="Apple-converted-space">    </span>href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌊%3C/text%3E%3C/svg%3E"</p>
-<p class="p1"><span class="Apple-converted-space">  </span>/&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color-scheme: light dark;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--bg: #fafafa;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--text: #111;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--muted: #555;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--accent: #2563eb;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>* {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 2.5rem 1.5rem 3rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--bg);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.page {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 640px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.75rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* ---- Links + subtle hover animation ---- */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--accent);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition:</p>
-<p class="p1"><span class="Apple-converted-space">        </span>color 0.15s ease-out,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>transform 0.15s ease-out;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* animated underline */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>a::before {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>content: "";</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>bottom: -2px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 1px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: var(--accent);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.85;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: width 0.18s ease-out;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: translateY(-1px);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>a:hover::before {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>hr {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid rgba(0,0,0,0.08);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 2rem 0 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section-title {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>letter-spacing: 0.12em;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-transform: uppercase;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.6rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.socials {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.socials a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* keep the little ↗ arrow on social links */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.socials a::after {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>content: "↗";</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.75em;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-left: 0.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.5;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* ---- Custom cursor ---- */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.cursor {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: fixed;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>left: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 22px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 22px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 2px solid rgba(0, 0, 0, 0.6);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>pointer-events: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: translate(-50%, -50%);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition:</p>
-<p class="p1"><span class="Apple-converted-space">        </span>transform .15s ease-out,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>width .15s ease-out,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>height .15s ease-out,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>background-color .15s ease-out,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>border-color .15s ease-out;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>z-index: 9999;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>mix-blend-mode: difference;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.cursor--link {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 40px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: rgba(0, 0, 0, 0.12);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-color: rgba(0, 0, 0, 0.8);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="cursor"&gt;&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;main class="page"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Nehal Sanghai&lt;/h1&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>i’m a senior at NYU Stern majoring in<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://meet.nyu.edu/academics/a-business-program-built-for-the-future/" target="_blank" rel="noreferrer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>business, tech and entrepreneurship</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/a&gt;.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>i’m currently building<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://oryxai.co/" target="_blank" rel="noreferrer"&gt;oryx&lt;/a&gt;,</p>
-<p class="p1"><span class="Apple-converted-space">      </span>an AI company which makes institutional knowledge searchable and alive for private market firms.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>i've spent over three summers in private equity and dabbled around in venture capital investing + start up consulting.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>i spend most of my free time reading about companies, tinkering with tech and writing.</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>find my key book takeaways and the process of experimenting with technology regularly on my blog:</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;&lt;a href="https://nehalbuilds.substack.com/?utm_campaign=profile_chips" target="_blank"&gt;nehal builds&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;&lt;a href="https://nehalsanghai.substack.com/?utm_campaign=profile_chips" target="_blank"&gt;nehal’s substack&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;hr /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-title"&gt;projects&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://nehalsanghai.notion.site/BTE-Hackathon-3ec615c38cd4436db0ce785c1bfadbb1?pvs=143" target="_blank"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>algae bioreactor</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;AI tool which finds up to 10 layers of stock derivative beneficiaries for any company&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a href="https://nehalsanghai.notion.site/3bfae6edb3c54f7e8e78c24dfca4e19d?v=119fc15cc8eb4e35bcb98300af34f0ed" target="_blank"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>other projects playing with microbits &amp;amp; data</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;hr /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-title"&gt;hobbies&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>writing poetry (&lt;a href="https://drive.google.com/drive/folders/1B-AGPXjwpMWSwsy9tR02d81okYZlJsfW?usp=sharing" target="_blank"&gt;check out my book!&lt;/a&gt;)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;cooking indian food / quick healthy recipes&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;live experiences (broadway, concerts, sports games, conferences)&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;traveling&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;trying new foods&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;binging home tours on youtube&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>i love meeting new people, reach out at:</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="mailto:nehal.sanghai@gmail.com"&gt;nehal.sanghai@gmail.com&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;hr /&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="socials"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://www.linkedin.com/in/nehalsanghai/" target="_blank"&gt;linkedin&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://substack.com/@nehalsanghai" target="_blank"&gt;substack&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://instagram.com/nehal.sanghai" target="_blank"&gt;instagram&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const cursor = document.querySelector(".cursor");</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.addEventListener("mousemove", (e) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor.style.top = e.clientY + "px";</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor.style.left = e.clientX + "px";</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll("a").forEach(link =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>link.addEventListener("mouseenter", () =&gt; cursor.classList.add("cursor--link"));</p>
-<p class="p1"><span class="Apple-converted-space">      </span>link.addEventListener("mouseleave", () =&gt; cursor.classList.remove("cursor--link"));</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <div class="cursor"></div>
+
+  <main class="page">
+    <h1>Nehal Sanghai</h1>
+
+    <p>
+      i’m a senior at NYU Stern majoring in 
+      <a href="https://meet.nyu.edu/academics/a-business-program-built-for-the-future/" target="_blank" rel="noreferrer">
+        business, tech and entrepreneurship
+      </a>.
+    </p>
+
+    <p>
+      i’m currently building 
+      <a href="https://oryxai.co/" target="_blank" rel="noreferrer">oryx</a>,
+      an AI company which makes institutional knowledge searchable and alive for private market firms.
+    </p>
+
+    <p>
+      i've spent over three summers in private equity and dabbled around in venture capital investing + start up consulting.
+    </p>
+
+    <p>
+      i spend most of my free time reading about companies, tinkering with tech and writing.
+    </p>
+
+    <p>
+      find my key book takeaways and the process of experimenting with technology regularly on my blog:
+    </p>
+
+    <ul>
+      <li><a href="https://nehalbuilds.substack.com/?utm_campaign=profile_chips" target="_blank">nehal builds</a></li>
+      <li><a href="https://nehalsanghai.substack.com/?utm_campaign=profile_chips" target="_blank">nehal’s substack</a></li>
+    </ul>
+
+    <hr />
+
+    <div>
+      <div class="section-title">projects</div>
+      <ul>
+        <li>
+          <a href="https://nehalsanghai.notion.site/BTE-Hackathon-3ec615c38cd4436db0ce785c1bfadbb1?pvs=143" target="_blank">
+            algae bioreactor
+          </a>
+        </li>
+        <li>AI tool which finds up to 10 layers of stock derivative beneficiaries for any company</li>
+        <li>
+          <a href="https://nehalsanghai.notion.site/3bfae6edb3c54f7e8e78c24dfca4e19d?v=119fc15cc8eb4e35bcb98300af34f0ed" target="_blank">
+            other projects playing with microbits &amp; data
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <div>
+      <div class="section-title">hobbies</div>
+      <ul>
+        <li>
+          writing poetry (<a href="https://drive.google.com/drive/folders/1B-AGPXjwpMWSwsy9tR02d81okYZlJsfW?usp=sharing" target="_blank">check out my book!</a>)
+        </li>
+        <li>cooking indian food / quick healthy recipes</li>
+        <li>live experiences (broadway, concerts, sports games, conferences)</li>
+        <li>traveling</li>
+        <li>trying new foods</li>
+        <li>binging home tours on youtube</li>
+      </ul>
+    </div>
+
+    <p>
+      i love meeting new people, reach out at:
+      <a href="mailto:nehal.sanghai@gmail.com">nehal.sanghai@gmail.com</a>
+    </p>
+
+    <hr />
+
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/nehalsanghai/" target="_blank">linkedin</a>
+      <a href="https://substack.com/@nehalsanghai" target="_blank">substack</a>
+      <a href="https://instagram.com/nehal.sanghai" target="_blank">instagram</a>
+    </div>
+
+  </main>
+
+  <script>
+    const cursor = document.querySelector(".cursor");
+
+    document.addEventListener("mousemove", (e) => {
+      cursor.style.top = e.clientY + "px";
+      cursor.style.left = e.clientX + "px";
+    });
+
+    document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("mouseenter", () => cursor.classList.add("cursor--link"));
+      link.addEventListener("mouseleave", () => cursor.classList.remove("cursor--link"));
+    });
+  </script>
 </body>
 </html>
