@@ -14,7 +14,7 @@
   <style>
     :root {
       color-scheme: light dark;
-      --bg: #e4ddc8;
+      --bg: #d0cfcd;
       --text: #111;
       --muted: #555;
       --accent: #2563eb;
@@ -50,7 +50,6 @@
         transform 0.15s ease-out;
     }
 
-    /* animated underline */
     a::before {
       content: "";
       position: absolute;
@@ -93,7 +92,6 @@
       border: none;
       position: relative;
     }
-    /* keep the little ↗ arrow on social links */
     .socials a::after {
       content: "↗";
       font-size: 0.75em;
@@ -106,26 +104,27 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 22px;
-      height: 22px;
+      width: 8px;
+      height: 8px;
       border-radius: 999px;
-      border: 2px solid rgba(0, 0, 0, 0.6);
+      background: #ff2a2a;
       pointer-events: none;
       transform: translate(-50%, -50%);
       transition:
-        transform .15s ease-out,
-        width .15s ease-out,
-        height .15s ease-out,
-        background-color .15s ease-out,
-        border-color .15s ease-out;
+        transform 0.12s ease-out,
+        background-color 0.12s ease-out,
+        box-shadow 0.12s ease-out,
+        width 0.12s ease-out,
+        height 0.12s ease-out;
       z-index: 9999;
-      mix-blend-mode: difference;
+      box-shadow: 0 0 10px rgba(255, 42, 42, 0.7);
     }
+
     .cursor--link {
-      width: 40px;
-      height: 40px;
-      background-color: rgba(0, 0, 0, 0.12);
-      border-color: rgba(0, 0, 0, 0.8);
+      width: 22px;
+      height: 22px;
+      background-color: rgba(255, 42, 42, 0.15);
+      box-shadow: 0 0 14px rgba(255, 42, 42, 0.9);
     }
   </style>
 </head>
@@ -144,7 +143,7 @@
     </p>
 
     <p>
-      i’m currently building 
+      currently building 
       <a href="https://oryxai.co/" target="_blank" rel="noreferrer">oryx</a>,
       an AI company which makes institutional knowledge searchable and alive for private market firms.
     </p>
@@ -154,7 +153,7 @@
     </p>
 
     <p>
-      i spend most of my free time reading about companies, tinkering with tech and writing.
+      most of my free time is spent reading about companies, tinkering with tech and writing.
     </p>
 
     <p>
@@ -177,6 +176,7 @@
           </a>
         </li>
         <li>AI tool which finds up to 10 layers of stock derivative beneficiaries for any company</li>
+        <li>exploring private equity opportunities in india</li>
         <li>
           <a href="https://nehalsanghai.notion.site/3bfae6edb3c54f7e8e78c24dfca4e19d?v=119fc15cc8eb4e35bcb98300af34f0ed" target="_blank">
             other projects playing with microbits &amp; data
@@ -218,16 +218,44 @@
 
   <script>
     const cursor = document.querySelector(".cursor");
+    const links = document.querySelectorAll("a");
+
+    let targetX = window.innerWidth / 2;
+    let targetY = window.innerHeight / 2;
+    let currentX = targetX;
+    let currentY = targetY;
+
+    const lag = 0.18;
 
     document.addEventListener("mousemove", (e) => {
-      cursor.style.top = e.clientY + "px";
-      cursor.style.left = e.clientX + "px";
+      targetX = e.clientX;
+      targetY = e.clientY;
     });
 
-    document.querySelectorAll("a").forEach(link => {
-      link.addEventListener("mouseenter", () => cursor.classList.add("cursor--link"));
-      link.addEventListener("mouseleave", () => cursor.classList.remove("cursor--link"));
+    function animateCursor() {
+      currentX += (targetX - currentX) * lag;
+      currentY += (targetY - currentY) * lag;
+
+      cursor.style.left = currentX + "px";
+      cursor.style.top = currentY + "px";
+
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    links.forEach((link) => {
+      link.addEventListener("mouseenter", () => {
+        cursor.classList.add("cursor--link");
+      });
+      link.addEventListener("mouseleave", () => {
+        cursor.classList.remove("cursor--link");
+      });
     });
+
+    if (!("requestAnimationFrame" in window)) {
+      document.body.style.cursor = "auto";
+      cursor.style.display = "none";
+    }
   </script>
 </body>
 </html>
